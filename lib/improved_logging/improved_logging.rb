@@ -87,7 +87,7 @@ module ImprovedLogging
 
   # These are configurable, put something like the following in an initializer:
   #   ImprovedLogging.verbose = false
-  @@verbose = Rails.env != "development"
+  @@verbose = Rails.env != "development" if defined?(::Rails)
   @@full_hostname = get_hostname
   @@hostname_maxlen = 10
   @@custom = nil
