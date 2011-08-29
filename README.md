@@ -48,7 +48,7 @@ take an exception as an argument and print the stack trace.
 
 Sample verbose output:
 
-```ruby
+<pre>
 fossil.4685  Started GET "/my-mlg?page=1&page_size=10&_=1314650041431" for 127.0.0.1 at 2011-08-29 16:34:01 -0400
 fossil.4685  16:34:01  INFO       Processing by TimelineEventsController#personal_and_friends as JSON
 fossil.4685  16:34:01  INFO       Parameters: {"page"=>"1", "page_size"=>"10", "_"=>"1314650041431"}
@@ -66,7 +66,7 @@ fossil.4685  16:34:01  INFO     Rendered shared/event_message_templates/_comment
 fossil.4685  16:34:01  INFO     Rendered shared/event_message_templates/_message_template.html.haml (69.2ms)
 fossil.4685  16:34:01  INFO     Rendered shared/feed.haml (72.6ms)
 fossil.4685  16:34:01  INFO     Completed 200 OK in 246ms (Views: 3.4ms | ActiveRecord: 2.0ms)
-```
+</pre>
 
 ## License
 
