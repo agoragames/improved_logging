@@ -23,17 +23,17 @@ process ID or hostname. If RAILS_ENV is not "development" those will be logged.
 
 There are some options that can be set, add these lines to an initializer:
 
-@ImprovedLogging.verbose = false@
+`ImprovedLogging.verbose = false`
 * This suppresses printing of the hostname, process ID and timestamp. This 
 defaults to false in development mode, true otherwise.
 
-@ImprovedLogging.hostname_maxlen = 15@
+`ImprovedLogging.hostname_maxlen = 15`
 * This sets the maximum number of characters of the hostname that will be 
 printed. The beginning of the hostname is truncated, rather than the end, 
 because often the end of the hostname is more unique than the beginning. 
 The default is 10.
 
-@ImprovedLogging.custom = "my-custom-string"@
+`ImprovedLogging.custom = "my-custom-string"`
 * This sets a custom string that will be printed at the beginning of the 
 output, if desired.
 
