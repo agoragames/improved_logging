@@ -30,6 +30,7 @@ output, if desired.
 ## License
 
 Code originally found in https://github.com/pauldowman/better_logging
+
 Uses the same license as better_logging, 
 Creative Commons "Attribution-Share Alike", http://creativecommons.org/licenses/by-sa/3.0/
 
