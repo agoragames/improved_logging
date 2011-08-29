@@ -1,10 +1,10 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "better_logging/version"
+require "improved_logging/version"
 
 Gem::Specification.new do |s|
-  s.name        = "better_logging"
-  s.version     = BetterLogging::VERSION
+  s.name        = "improved_logging"
+  s.version     = ImprovedLogging::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["TODO: Write your name"]
   s.email       = ["TODO: Write your email address"]
@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.summary     = %q{TODO: Write a gem summary}
   s.description = %q{TODO: Write a gem description}
 
-  s.rubyforge_project = "better_logging"
+  s.rubyforge_project = "improved_logging"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

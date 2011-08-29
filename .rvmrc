@@ -1,1 +1,1 @@
-rvm use ruby-1.9.2@better_logging_gem --create
+rvm use ruby-1.9.2@improved_logging_gem --create

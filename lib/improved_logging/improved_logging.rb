@@ -5,7 +5,7 @@
 # license: for details see: 
 # http://creativecommons.org/licenses/by-sa/3.0/
 #
-module BetterLogging  
+module ImprovedLogging  
   LENGTH = ActiveSupport::BufferedLogger::Severity.constants.map{|c| c.to_s.length}.max
   
   def self.included(base)
@@ -86,7 +86,7 @@ module BetterLogging
   # The following are cached as class variables for speed.
 
   # These are configurable, put something like the following in an initializer:
-  #   PaulDowman::RailsPlugins::BetterLogging.verbose = false
+  #   ImprovedLogging.verbose = false
   @@verbose = Rails.env != "development"
   @@full_hostname = get_hostname
   @@hostname_maxlen = 10
@@ -102,7 +102,7 @@ module BetterLogging
   def update_pid
     if @@pid != $$
       @@pid = $$
-      @@line_prefix = BetterLogging.format_line_prefix
+      @@line_prefix = ImprovedLogging.format_line_prefix
     end
   end
   
