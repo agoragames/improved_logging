@@ -1,9 +1,19 @@
 # improved_logging
 
+Improves the log format and adds an optional "Exception" parameter to the 
+warn() and error() methods to print a stack trace automatically.
+
 ## Installation
 
 ```ruby
 gem 'improved_logging'
+```
+
+In your `application.rb`, include the following (or similar):
+
+```ruby
+config.logger = ActiveSupport::BufferedLogger.new(config.paths.log.first)
+config.logger.level = Logger::DEBUG
 ```
 
 ## Configuration
@@ -26,6 +36,12 @@ The default is 10.
 @ImprovedLogging.custom = "my-custom-string"@
 * This sets a custom string that will be printed at the beginning of the 
 output, if desired.
+
+## Format
+
+It adds severity level (with colour, if colour is enabled), hostname and 
+process ID to each log line, and it and adds warn() and exception() methods that 
+take an exception as an argument and print the stack trace.
 
 ## License
 
