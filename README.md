@@ -68,13 +68,6 @@ fossil.4685  16:34:01  INFO     Rendered shared/feed.haml (72.6ms)
 fossil.4685  16:34:01  INFO     Completed 200 OK in 246ms (Views: 3.4ms | ActiveRecord: 2.0ms)
 </pre>
 
-## License
-
-Code originally found in https://github.com/pauldowman/better_logging
-
-Uses the same license as better_logging, 
-Creative Commons "Attribution-Share Alike", http://creativecommons.org/licenses/by-sa/3.0/
-
 ## Contributing to improved_logging
 
  * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
@@ -84,3 +77,10 @@ Creative Commons "Attribution-Share Alike", http://creativecommons.org/licenses/
  * Commit and push until you are happy with your contribution
  * Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
  * Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+## License
+
+Code originally found in https://github.com/pauldowman/better_logging
+
+Uses the same license as better_logging, 
+Creative Commons "Attribution-Share Alike", http://creativecommons.org/licenses/by-sa/3.0/
