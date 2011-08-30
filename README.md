@@ -1,7 +1,7 @@
 # improved_logging
 
-Improves the log format and adds an optional "Exception" parameter to the 
-warn() and error() methods to print a stack trace automatically.
+Improves the log format and adds an optional `exception` parameter to the 
+`warn()` and `error()` methods to print a stack trace automatically.
 
 ## Installation
 
@@ -19,7 +19,7 @@ config.logger.level = Logger::DEBUG
 ## Configuration
 
 By default it behaves differently in development mode, it doesn't log the time, 
-process ID or hostname. If RAILS_ENV is not "development" those will be logged.
+process ID or hostname. If `Rails.env` is not `development` those will be logged.
 
 There are some options that can be set, add these lines to an initializer:
 
