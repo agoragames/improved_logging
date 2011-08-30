@@ -16,6 +16,12 @@ describe ActiveSupport::BufferedLogger do
     @logger.methods.should include(:warn_with_exception_param)    
   end
   
+  it 'should call #add when you log a message' do
+    @logger.should_receive(:add).with(0, 'message', nil)
+    
+    @logger.debug('message')
+  end
+  
   it 'should allow you to pass an exception to the error method' do
     @logger.should_receive(:error).with('message', anything())
     
