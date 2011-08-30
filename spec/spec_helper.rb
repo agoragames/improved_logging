@@ -1,5 +1,5 @@
 require 'rubygems'
 require 'rspec'
 
-RSpec.configure do |c|
+RSpec.configure do |configuration|
 end
