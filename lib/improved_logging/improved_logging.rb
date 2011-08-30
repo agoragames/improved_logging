@@ -6,7 +6,7 @@
 # http://creativecommons.org/licenses/by-sa/3.0/
 #
 module ImprovedLogging  
-  LENGTH = ActiveSupport::BufferedLogger::Severity.constants.map{|c| c.to_s.length}.max
+  LENGTH = ::ActiveSupport::BufferedLogger::Severity.constants.map{|c| c.to_s.length}.max
   
   def self.included(base)
     base.class_eval do
@@ -21,15 +21,15 @@ module ImprovedLogging
     # Most of this is done with class_eval so it should only be done once 
     # while the class is being loaded.
     if_stmts = ""
-    for c in ActiveSupport::BufferedLogger::Severity.constants
+    for c in ::ActiveSupport::BufferedLogger::Severity.constants
       if_stmts += <<-EOT
         if severity == #{c}
           severity_name = sprintf("%1$*2$s", "#{c}", #{LENGTH * -1})
           use_colour = false
-          if Rails.version.to_i >= 3
-            use_colour = true if ActiveSupport::LogSubscriber.colorize_logging
+          if ::Rails.version.to_i >= 3
+            use_colour = true if ::ActiveSupport::LogSubscriber.colorize_logging
           else
-            use_colour = true if defined?(ActiveRecord) && ActiveRecord::Base.colorize_logging
+            use_colour = true if defined?(::ActiveRecord) && ::ActiveRecord::Base.colorize_logging
           end
           if use_colour
             if severity == INFO
@@ -87,7 +87,7 @@ module ImprovedLogging
 
   # These are configurable, put something like the following in an initializer:
   #   ImprovedLogging.verbose = false
-  @@verbose = Rails.env != "development" if defined?(::Rails)
+  @@verbose = defined?(::Rails) ? ::Rails.env != "development" : false
   @@full_hostname = get_hostname
   @@hostname_maxlen = 10
   @@custom = nil
@@ -109,7 +109,7 @@ module ImprovedLogging
   def add_with_extra_info(severity, message = nil, progname = nil, &block)
     update_pid
     time = @@verbose ? "#{Time.new.strftime('%H:%M:%S')}  " : ""
-    message = "#{time}#{ActiveSupport::BufferedLogger.severity_name(severity)}  #{message}"
+    message = "#{time}#{::ActiveSupport::BufferedLogger.severity_name(severity)}  #{message}"
     
     # Make sure every line has the PID and hostname and custom string 
     # so we can use grep to isolate output from one process or server.
