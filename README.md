@@ -75,9 +75,12 @@ Code originally found in https://github.com/pauldowman/better_logging
 Uses the same license as better_logging, 
 Creative Commons "Attribution-Share Alike", http://creativecommons.org/licenses/by-sa/3.0/
 
-## Note on Patches/Pull Requests
+## Contributing to improved_logging
 
- * Fork the project.
- * Make your feature addition or bug fix.
- * Commit, do not mess with rakefile, version, or history. (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
- * Send me a pull request.
+ * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
+ * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+ * Fork the project
+ * Start a feature/bugfix branch
+ * Commit and push until you are happy with your contribution
+ * Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+ * Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
