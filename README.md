@@ -6,7 +6,7 @@ Improves the log format and adds an optional `exception` parameter to the
 ## Installation
 
 ```ruby
-gem 'improved_logging'
+gem 'improved_logging', :git => 'git@github.com:agoragames/improved_logging.git'
 ```
 
 In your `application.rb`, include the following (or similar):
