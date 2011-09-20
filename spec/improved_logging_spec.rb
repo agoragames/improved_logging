@@ -41,4 +41,16 @@ describe ActiveSupport::BufferedLogger do
       @logger.warn('message', e)
     end
   end
+
+  [:error, :warn].each do |severity|
+    it 'should allow you to pass a block to the error method' do
+      method_sym = "#{severity}_without_exception_param".to_sym
+      @logger.should_receive(method_sym).with('message')
+      begin
+        raise StandardError.new
+      rescue => e
+        @logger.send(severity) { 'message' }
+      end
+    end
+  end
 end
