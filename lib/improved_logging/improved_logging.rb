@@ -123,12 +123,14 @@ module ImprovedLogging
   
   # add an optional second parameter to the error & warn methods to allow a stack trace:
         
-  def error_with_exception_param(message, exception = nil)
+  def error_with_exception_param(message = '', exception = nil)
+    message = yield if block_given?
     message += "\n#{exception.inspect}\n#{exception.backtrace.join("\n")}" if exception
     error_without_exception_param(message)
   end
   
-  def warn_with_exception_param(message, exception = nil)
+  def warn_with_exception_param(message = '', exception = nil)
+    message = yield if block_given?
     message += "\n#{exception.inspect}\n#{exception.backtrace.join("\n")}" if exception
     warn_without_exception_param(message)
   end
