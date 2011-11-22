@@ -4,7 +4,7 @@ require "improved_logging/version"
 
 Gem::Specification.new do |s|
   s.name        = "improved_logging"
-  s.version     = ImprovedLogging::VERSION
+  s.version     = ImprovedLogging::VERSION.dup
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["David Czarnecki"]
   s.email       = ["dczarnecki@agoragames.com"]
